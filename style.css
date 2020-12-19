@@ -37,6 +37,9 @@ body{ text-align: center; }
     color:white;
 }
 
+.btn {
+    margin-top:15px;
+}
 /*Pendientes*/
 
 /* Generar variable para casilla (tocado)roja*/
