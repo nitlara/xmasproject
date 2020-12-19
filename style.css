@@ -9,6 +9,7 @@ body{ text-align: center; }
 	width:475px;
     height:475px;
     text-align: center;
+    vertical-align: middle;
 }
 .firstrow{
     text-align: center;
@@ -39,9 +40,18 @@ body{ text-align: center; }
 
 .btn {
     margin-top:15px;
+    background-color: gray!important;
+    color:white!important;
 }
-/*Pendientes*/
 
-/* Generar variable para casilla (tocado)roja*/
-/* Generar variable para casilla (agua)gris oscuro*/
-/* */
+.touchspace {
+    background-color: rgb(168, 13, 13);
+}
+.waterspace {
+    background-color: rgb(5, 104, 150);
+}
+.sunken {
+    background-color: rgb(85, 3, 3);
+}
+
+

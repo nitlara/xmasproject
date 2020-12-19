@@ -15,9 +15,17 @@ let gameBoard = [
     [1,1,1,1,0,0,0,0,0,0]
 ];
 
+
+
+
 //Fire via -->  onClick to every <div> and call the fireTorpedo function with the coordinates of the div. 
+  window.onload = function loadFn() {
+	var firepoint = event.target;
+    console.log(firepoint.tagName);
+    };
 
     //function fireTorpedo
+     // onClick="fireTorpedo(${la columna que sea},${la fila que sea}, evento
 //Replace the value on the gameBoard and render the board again.
 //Button Fire --> promt coordenadas
     //Si toca barco --> class red
