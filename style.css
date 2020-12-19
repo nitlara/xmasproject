@@ -2,35 +2,38 @@
     width:350px;
     height:350px;
 }
-
-
-
 body{ text-align: center; }
 #tableboard {
 	display:flex;
     flex-wrap: wrap;
-	width:500px;
-	height:500px;
+	width:475px;
+    height:475px;
+    text-align: center;
 }
-
+.firstrow{
+    text-align: center;
+    width:50px;
+    height:25px;
+    background-color:rgb(161, 158, 158);
+    color:white;
+    border: 1px solid rgb(221, 218, 218);
+}
+.firstrow:first-child {
+    width:25px;
+    height:25px;
+    background-color:rgb(161, 158, 158);
+    color:white;
+}
 .casillas {
-	border: 1px solid rgb(151, 14, 14);
+	border: 1px solid rgb(221, 218, 218);
 	width:50px;
 	height:50px;
     text-align: center;
 }
-
 .casillas:first-child {
     width:25px;
     height:50px;
-    background-color:rgb(82, 79, 79);
-    color:white;
-}
-
-.casillas:first-child {
-    width:25px;
-    height:50px;
-    background-color:rgb(82, 79, 79);
+    background-color:rgb(161, 158, 158);
     color:white;
 }
 
