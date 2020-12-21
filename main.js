@@ -16,8 +16,6 @@ let gameBoard = [
 ];
 
 
-
-
 //Fire via -->  onClick to every <div> and call the fireTorpedo function with the coordinates of the div. 
  
 window.onload = function() {
@@ -35,8 +33,8 @@ window.onload = function() {
         color:"black",
         value:2}
      ]
-/*
-  var newColor = document.getElementsById("casilla");
+
+  /*var newColor = document.getElementsById("casilla");
   newColor.classList.add("waterspace");
 newColor[0].innerHTML = "AGUA";
  newColor.classList.add(variable[posicion].color);
@@ -54,4 +52,37 @@ newColor[0].innerHTML = "AGUA";
 //Botón reinicio partida 
     // colocar barcos
 
+
+    /*
+    com generar un click:
+    seleccionar cada una de les caselles
+    per cada una d'elles generar un onclick
+jQuery('.casilla').click()
+
+    object.addEventListener("click", myScript);
+
+    com associar la funció myScript 
+
+    1.
+    function fireTorpedo(event) {
+        //amb event fer coses
+        //aqui la funció
+        alert(event.target); //segurament target és el div "casilla"
+
+        amb aquest casilla pots mirar si te classe que et digui quina casella és
+
+        o bé
+
+        fer un index of i mirar quina posició ocupa
+
+    }
+    object.addEventListener("click", fireTorpedo);
+
+    2.
+    object.addEventListener("click", function(event){
+        // 
+    });
+
+
+    */
     
