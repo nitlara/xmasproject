@@ -22,26 +22,3 @@ animaciones cuando se hunda barco o ganes partida o toques agua https://www.w3sc
 
 
 
-
-
-//recorrer array multidimensional 
-
-/*for(var i=0; i<nuevoArray.length; i++) {
-    //Bucle que recorre el array que está en la posición i
-    for(var j=0; j<nuevoArray[i].length; j++) {
-        document.write(nuevoArray[i][j]);
-    }
-}
-
-Imaginemos que queremos imprimir toda la agenda. Realizaríamos algo como
-
-for(var i=0; i<gameboard.length; i++) {
-    for(var j=0; j<gameboard[i].length; j++) {
-        for(var k=0; k<gameboard[i][j].length; k++) {
-            document.write("Evento: "+gameboard[i][j][k]+", Mes: "+(i+1)+", Día: "+(j+1)+ ", Hora: "+k+"<br>");
-        }
-    }
-    
-    
-    
-    */
