@@ -1,3 +1,10 @@
+Elementos que he visto que me cuestan o no he sabido hacer (y he buscado alternativa)
+
+Crear el html desde js.
+
+
+
+
 Proyecto 
 https://projects.breatheco.de/interactive-coding-tutorial/intermediate/battleship-vanillajs
 
@@ -9,6 +16,7 @@ To represent the gameBoard you can use a JS matrix like this:
 // 2 = a sunken part of a ship
 // 3 = a missed shot
 let gameBoard = [
+   
     [1,1,1,1,1,0,0,0,0,1],
     [0,0,0,0,0,0,0,0,0,1],
     [0,0,0,0,0,0,0,0,0,1],
