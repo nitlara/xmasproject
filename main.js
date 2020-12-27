@@ -8,18 +8,6 @@ window.onload = function Addonclick() {
 // Valores barcos
 // 0 = empty // 1 = part of a ship // 2 = a sunken part of a ship // 3 = a missed shot
 // Matriz de juego : diccionario arrays
-/*let gameBoard =[
-    {"A": [1,1,1,1,1,0,0,0,0]},
-    {"B": [1,1,1,1,1,0,0,0,0]},
-    {"C": [1,1,1,1,1,0,0,0,0]},
-    {"D": [1,1,1,1,1,0,0,0,0]},
-    {"E": [1,1,1,1,1,0,0,0,0]},
-    {"F": [1,1,1,1,1,0,0,0,0]},
-    {"G": [1,1,1,1,1,0,0,0,0]},
-    {"H": [1,1,1,1,1,0,0,0,0]},
-    {"I": [1,1,1,1,1,0,0,0,0]}   
-];*/
-
 let gameBoard = [   
     [1,1,1,1,1,0,0,0,1],
     [0,0,0,0,0,0,0,0,1],
@@ -40,7 +28,7 @@ function myFunction (event) {
         target = target.substring(9,11)
             targetLetter = target.substring(0,1)
             targetNumber = target.substring(1,2)
-        //Posición del array
+        //Conversión para posición Numero y Letra en el Array
             var targetPosition = targetNumber -1;
             var targetLposition =  0;
                  if (targetLetter == "A") {
@@ -58,26 +46,29 @@ function myFunction (event) {
                     } else if (targetLetter == "G") {
                     targetLposition = 6;
                     } else {targetLposition = 7;}
-        //Saber la relación con casilla clicada i array Gameboard           
+        //Obtener valor de las coordenadas
+                //Tabla del array gameBoard
+                //console.table(gameBoard);
             var valorgameboard = (gameBoard[targetLposition][targetPosition]);
             console.log(valorgameboard);
-        //Añadir cambio de colores via clase a los que cambian de valor
-/*  //cuando tenga una clase con el valor de target --> 
-    getElementsByClassName("target")
-        devuelve el valor de la posición targetLetter.value[targetNumber.value -1] --> hay que hacer alguna conversion porque targetLetter para gameboard no es nada.
-        gameboard.targetLetter(targetNumber-1)
-            //Si es 0 ++3; añade clase "waterspace"
+        //Cambiar clase y valor matriz
+            // clase        
+               /* if (valorgameboard == 0){
+                    target.classList.add("waterspace");
+                   console.log(target);
+                }*/
+              
+                /*Si es 0 ++3; añade clase "waterspace"
                 if (target.value == 0) {   
                     ++3,             
                     classList.add("waterspace");}
-            //Si es 1 ++1; añade clase "touchspace"
+                //Si es 1 ++1; añade clase "touchspace"
                 if (target.value == 0) {   
                     ++1,             
                     classList.add("touchspace");}
-*/     }
-      console.log("Clase que indica posición "+ target+" con sus substrings "+ targetLetter+" "+targetNumber+" posiciones derivadas dentro array. En Posición dentro array podría ser --> Letra "+targetLposition+" --> número "+targetPosition);
-     // console.log(gameBoard.findIndex[]) //https://developer.mozilla.org/ca/docs/Web/JavaScript/Referencia/Objectes_globals/Array/findIndex
-       }
+*/     } //este cierre viene de "if (target.indexOf('casillas ') === 0 )"
+
+    } //este cierre cierra myfunction 
 
 
 
