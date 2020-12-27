@@ -21,16 +21,16 @@ window.onload = function Addonclick() {
 ];*/
 
 let gameBoard = [   
-    [1,1,1,1,1,0,0,0,0,1],
-    [0,0,0,0,0,0,0,0,0,1],
-    [0,0,0,0,0,0,0,0,0,1],
-    [0,0,0,0,0,0,0,0,0,1],
-    [0,0,0,0,0,0,0,0,0,0],
-    [1,0,0,1,1,0,0,0,0,0],
-    [1,0,0,0,0,0,0,0,0,0],
-    [1,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [1,1,1,1,0,0,0,0,0,0]
+    [1,1,1,1,1,0,0,0,1],
+    [0,0,0,0,0,0,0,0,1],
+    [0,0,0,0,0,0,0,0,1],
+    [0,0,0,0,0,0,0,0,1],
+    [0,0,0,0,0,0,0,0,0],
+    [1,0,0,1,1,0,0,0,0],
+    [1,0,0,0,0,0,0,0,0],
+    [1,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0],
+    [1,1,1,1,0,0,0,0,0]
 ];
 // Función que genera el evento TARGET de las clases "casilla"
 function myFunction (event) {
@@ -40,26 +40,28 @@ function myFunction (event) {
         target = target.substring(9,11)
             targetLetter = target.substring(0,1)
             targetNumber = target.substring(1,2)
-        //Conversión de los elementos de "gameboard" segun los valores que aparecen
-        //Añadir cambio de colores via clase a los que cambian de valor
-            //Posición del array
+        //Posición del array
             var targetPosition = targetNumber -1;
             var targetLposition =  0;
                  if (targetLetter == "A") {
-                    targetLposition = 1;
+                    targetLposition = 0;
                     } else if (targetLetter == "B") {
-                    targetLposition = 2;
+                    targetLposition = 1;
                     } else if (targetLetter == "C") {
-                    targetLposition = 3;
+                    targetLposition = 2;
                     } else if (targetLetter == "D") {
-                    targetLposition = 4;
+                    targetLposition = 3;
                     } else if (targetLetter == "E") {
-                    targetLposition = 5;
+                    targetLposition = 4;
                     } else if (targetLetter == "F") {
-                    targetLposition = 6;
+                    targetLposition = 5;
                     } else if (targetLetter == "G") {
-                    targetLposition = 7;
-                    } else {targetLposition = 8;}
+                    targetLposition = 6;
+                    } else {targetLposition = 7;}
+        //Saber la relación con casilla clicada i array Gameboard           
+            var valorgameboard = (gameBoard[targetLposition][targetPosition]);
+            console.log(valorgameboard);
+        //Añadir cambio de colores via clase a los que cambian de valor
 /*  //cuando tenga una clase con el valor de target --> 
     getElementsByClassName("target")
         devuelve el valor de la posición targetLetter.value[targetNumber.value -1] --> hay que hacer alguna conversion porque targetLetter para gameboard no es nada.
@@ -73,7 +75,7 @@ function myFunction (event) {
                     ++1,             
                     classList.add("touchspace");}
 */     }
-      console.log("Clase que indica posición "+ target+" con sus substrings "+ targetLetter+" "+targetNumber+" posiciones derivadas dentro array. De la letra "+targetLposition+"del número "+targetPosition);
+      console.log("Clase que indica posición "+ target+" con sus substrings "+ targetLetter+" "+targetNumber+" posiciones derivadas dentro array. En Posición dentro array podría ser --> Letra "+targetLposition+" --> número "+targetPosition);
      // console.log(gameBoard.findIndex[]) //https://developer.mozilla.org/ca/docs/Web/JavaScript/Referencia/Objectes_globals/Array/findIndex
        }
 
