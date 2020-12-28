@@ -50,20 +50,16 @@ function myFunction (event) {
                 //Tabla del array gameBoard
                 //console.table(gameBoard);
             var valorgameboard = (gameBoard[targetLposition][targetPosition]);
-            console.log(valorgameboard);
         //Cambiar clase y valor matriz
-            // clase        
+            // clase    
+            var elementos = document.getElementsByClassName(targetB);    
                 if (valorgameboard == 0){
-                  var elementos = document.getElementsByClassName(targetB);
-                    elementos[0].classList.add("waterspace");
+                  elementos[0].classList.add("waterspace");
                 }
-                 if (valorgameboard == 1){
-                  var elementos = document.getElementsByClassName(targetB);
+                else if (valorgameboard == 1){
                     elementos[0].classList.add("touchspace");
                 }
-
             } //este cierre viene de "if (target.indexOf('casillas ') === 0 )"
-
     } //este cierre cierra myfunction 
 
 
