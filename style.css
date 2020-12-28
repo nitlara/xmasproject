@@ -44,14 +44,11 @@ body{ text-align: center; }
     color:white!important;
 }
 
-.touchspace {
-    background-color: rgb(168, 13, 13);
+.casillas.touchspace {
+    background-color: rgb(168, 13, 13); 
 }
-.waterspace {
+.casillas.waterspace {
     background-color: rgb(5, 104, 150);
-}
-.sunken {
-    background-color: rgb(85, 3, 3);
 }
 
 
