@@ -20,6 +20,8 @@ let gameBoard = [
     [0,0,0,0,0,0,0,0,0],
     [1,1,1,1,0,0,0,0,0]
 ];
+
+
 // Función que genera el evento TARGET de las clases "casilla"
 function myFunction (event) {
     var target = event.target.className;
@@ -65,6 +67,21 @@ function myFunction (event) {
     } //cierra myfunction 
 
 
+//button problemas tiempo/orden
+    console.log("1");
+setTimeout(function(){
+var foo = document.getElementById('shoot');
+console.log("2",foo);
+foo.addEventListener('click', promptMe);
+function promptMe() {
+    var battleshoot = prompt("Insert your shoot", "B1");
+    alert (battleshoot);
+}
+},1000)
+
+
+
+
 
  //Ampliar con: 
     //Dentro de myFunction
@@ -75,4 +92,4 @@ function myFunction (event) {
 
 //Dudas
     //Generar toda la tabla, con las clases des de js.
-
+    //Tiempo de lag js vs html --> ejemplo button
