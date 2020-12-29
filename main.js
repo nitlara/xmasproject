@@ -11,9 +11,11 @@ window.onload = function Addonclick() {
         var battleshoot = prompt("Insert your shoot", "B1");
         myFunctionButton;
     }
+    //Al cargar window añade un evento al hacer click en el botón con id #show que muestra las casillas con 1
+    var show = document.querySelector('#show');
+    show.addEventListener('click', ShowFunction, false);
 }
-// Valores barcos
-// 0 = empty // 1 = part of a ship // 2 = a sunken part of a ship // 3 = a missed shot
+// Valores barcos  0 = empty // 1 = part of a ship // 2 = a sunken part of a ship // 3 = a missed shot
 // Matriz de juego : diccionario arrays
 let gameBoard = [   
     [1,1,1,1,1,0,0,0,1],
@@ -42,7 +44,7 @@ function myFunctionButton (){
     ()=> (TranslatePosition(targetB));
 }
 //Función que convierte los datos entrados (por click o button) en las coordenadas del array y hace los cambios necesarios de clase y valores del array.
-function TranslatePosition (){  
+function TranslatePosition (targetB){  
             targetLetter = targetB.substring(0,1)
             targetNumber = targetB.substring(1,2)
                 //Conversión para posición dada de targetNumber en el array gameBoard
@@ -81,7 +83,10 @@ function TranslatePosition (){
                 //console.table(gameBoard);//Tabla del array gameBoard. Dejar comentado si no es necesario hacer comprovaciones
     } //cierra TranslatePosition
 
-
+    //llamada en window onload muestra durante 5 segundos las casillas con valor 1 en matriz de un color distinto
+function ShowFunction(){
+console.log("pendiente")
+}
  //Ampliar con: 
     //Dentro de myFunction
         // Entrar "target" por promt
@@ -96,8 +101,8 @@ function TranslatePosition (){
 
         {for (let h = 0; h < 10; h++)
             CREA DIV con clase casillas 
-            var newDivcasillas = document.createElement("div");
-            newDivcasillas.classList.add("boxes")
+            var newDivboxes = document.createElement("div");
+            newDivboxes.classList.add("boxes")
             //aquí appendchild
 
             {for (let j = 0; j < 10; j++)
@@ -107,6 +112,6 @@ function TranslatePosition (){
                  var claseposicion = claseletra[0] + clasenumero
                 
                 
-                var newDivcasillas.classList.add(claseletra)
+                var newDivboxes.classList.add(claseletra)
                 Si j == 9 elimina valor 0 array 
 */
