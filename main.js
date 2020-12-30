@@ -4,13 +4,15 @@ window.onload = function Addonclick() {
     for (var i = 0; i < idboxes.length; i++) {
         idboxes[i].addEventListener("click", myFunctionEvent, false);
     }
-    //Al cargar window añade un evento al hacer click en el botón con id #shoot que dispara un prompt y ejecuta myFunctionButton
+    //Al cargar window añade un evento al hacer click en el botón con id #shoot que dispara un prompt y ejecuta TranslatePosition
     var shoot = document.querySelector('#shoot');
     shoot.addEventListener('click', ()=> (promptMe()));
-        function promptMe() {
-        var battleshoot = prompt("Insert your shoot", "B1");
-        myFunctionButton;
+    
+    function promptMe() {
+        var targetB = prompt("Insert your shoot", "B1");
+        TranslatePosition(targetB);
     }
+
     //Al cargar window añade un evento al hacer click en el botón con id #show que muestra las casillas con 1
     var show = document.querySelector('#show');
     show.addEventListener('click', ShowFunction, false);
@@ -33,15 +35,9 @@ let gameBoard = [
 function myFunctionEvent (event) {
     var target = event.target.className;
     // genera 1 variable dentro de la función con substring de la clase para quitar "casilla"
-        targetB = target.substring(9,11);
-        //llama la siguiente función necesaria
-       ()=> (TranslatePosition(targetB));
-    }
-//Función button añade valor para activar la siguiente función
-function myFunctionButton (){
-    var targetB = battleshoot; //añadir la conversión posible del codigo introducido a mano
+    targetB = target.substring(6,8);
     //llama la siguiente función necesaria
-    ()=> (TranslatePosition(targetB));
+    TranslatePosition(targetB);
 }
 //Función que convierte los datos entrados (por click o button) en las coordenadas del array y hace los cambios necesarios de clase y valores del array.
 function TranslatePosition (targetB){  
