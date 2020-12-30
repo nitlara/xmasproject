@@ -10,13 +10,14 @@ window.onload = function Addonclick() {
     
     function promptMe() {
         var targetB = prompt("Insert your shoot", "B1");
+        targetB = targetB.toUpperCase();
         TranslatePosition(targetB);
     }
-
     //Al cargar window añade un evento al hacer click en el botón con id #show que muestra las casillas con 1
     var show = document.querySelector('#show');
     show.addEventListener('click', ShowFunction, false);
-}
+         
+} //cierre windows.onload
 // Valores barcos  0 = empty // 1 = part of a ship // 2 = a sunken part of a ship // 3 = a missed shot
 // Matriz de juego : diccionario arrays
 let gameBoard = [   
@@ -61,10 +62,13 @@ function TranslatePosition (targetB){
                         targetLposition = 5;
                         } else if (targetLetter == "G") {
                         targetLposition = 6;
-                        } else {targetLposition = 7;}
+                        } else if (targetLetter == "H") {
+                        targetLposition = 7;
+                        } else {targetLposition = 8;}
     //Obtener valor de las coordenadas
         //console.table(gameBoard);//Tabla del array gameBoard. Dejar comentado si no es necesario hacer comprovaciones
         var valorgameboard = gameBoard[targetLposition][targetPosition];
+       // console.log(valorgameboard);
     //Cambiar clase 
         var elementos = document.getElementsByClassName(targetB);    
             if (valorgameboard == 0){
@@ -77,12 +81,16 @@ function TranslatePosition (targetB){
                     gameBoard[targetLposition][targetPosition] = 2;
                     }                  
                 //console.table(gameBoard);//Tabla del array gameBoard. Dejar comentado si no es necesario hacer comprovaciones
-    } //cierra TranslatePosition
+     } //cierra TranslatePosition
 
-    //llamada en window onload muestra durante 5 segundos las casillas con valor 1 en matriz de un color distinto
-function ShowFunction(){
-console.log("pendiente")
-}
+     //llamada en window onload muestra durante 5 segundos las casillas con valor 1 en matriz de un color distinto
+    function ShowFunction(){
+      //  if (gameBoard[targetLposition][targetPosition] == 2) {
+    //    target.style.background = "red";}
+    console.log("pendiente")
+    }
+  
+
  //Ampliar con: 
     //Dentro de myFunction
         // Entrar "target" por promt
