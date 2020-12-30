@@ -16,7 +16,7 @@ window.onload = function Addonclick() {
     //Al cargar window añade un evento al hacer click en el botón con id #show que muestra las casillas con 1
     var show = document.querySelector('#show');
     show.addEventListener('click', ShowFunction, false);
-         
+
 } //cierre windows.onload
 // Valores barcos  0 = empty // 1 = part of a ship // 2 = a sunken part of a ship // 3 = a missed shot
 // Matriz de juego : diccionario arrays
@@ -87,6 +87,15 @@ function TranslatePosition (targetB){
      //llamada en window onload muestra durante 5 segundos las casillas con valor 1 en matriz de un color distinto
     function ShowFunction(){
         //recorre el array y devuelve la posición de todos los valores 1. 
+        /* var indices = [];
+         var ele = 1;
+         var idx = gameBoard.indexOf(ele);
+         while (idx != -1) {
+             indices.push(idx);
+            idx = gameBoard.indexOf(ele, idx + 1);
+        }
+      
+        console.log(idx);*/
         //conversión posiciones a valores tablero
         //añadir clase Ship a todos.
         //activa sólo esta clase cuando se aprete el botón de mostrar barco
