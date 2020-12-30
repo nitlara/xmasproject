@@ -32,6 +32,7 @@ let gameBoard = [
     [0,0,0,0,0,0,0,0,0],
     [1,1,1,1,0,0,0,0,0]
 ];
+
 // Función que genera el evento TARGET de las clases "casilla" y llama la siguiente función.
 function myFunctionEvent (event) {
     var target = event.target.className;
@@ -67,7 +68,7 @@ function TranslatePosition (targetB){
                         } else {targetLposition = 8;}
     //Obtener valor de las coordenadas
         //console.table(gameBoard);//Tabla del array gameBoard. Dejar comentado si no es necesario hacer comprovaciones
-        var valorgameboard = gameBoard[targetLposition][targetPosition];
+        valorgameboard = gameBoard[targetLposition][targetPosition];
        // console.log(valorgameboard);
     //Cambiar clase 
         var elementos = document.getElementsByClassName(targetB);    
@@ -85,9 +86,11 @@ function TranslatePosition (targetB){
 
      //llamada en window onload muestra durante 5 segundos las casillas con valor 1 en matriz de un color distinto
     function ShowFunction(){
-      //  if (gameBoard[targetLposition][targetPosition] == 2) {
-    //    target.style.background = "red";}
-    console.log("pendiente")
+        //recorre el array y devuelve la posición de todos los valores 1. 
+        //conversión posiciones a valores tablero
+        //añadir clase Ship a todos.
+        //activa sólo esta clase cuando se aprete el botón de mostrar barco
+     console.log("pendiente")
     }
   
 
