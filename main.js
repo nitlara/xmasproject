@@ -81,7 +81,7 @@ function TranslatePosition(targetB) {
 	}
 	//console.table(gameBoard);//Tabla del array gameBoard. Dejar comentado si no es necesario hacer comprovaciones
 } //cierra TranslatePosition
-//llamada en window onload muestra durante 5 segundos las casillas con valor 1 en matriz de un color distinto
+//showFunction nos muestra los barcos y remite a Translate Position para disparar
 function ShowFunction() {
 	var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
 	for (var i = 0; i < gameBoard.length; i++) {
