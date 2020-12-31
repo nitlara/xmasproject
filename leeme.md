@@ -32,3 +32,27 @@ Add one onClick to every <div> and call the fireTorpedo function with the coordi
 Replace the value on the gameBoard and render the board again.
 😎 Feeling confident?
 Try implementing a "showShips" function that shows the ship positoins when clicked.
+
+
+
+//Otra posibilidad - Generar toda la tabla, con las clases des de js.
+/*    for (let i=0; i < gameboard.length ;i++)
+        CREA DIV con clase ROW
+        var newDivrow = document.createElement("div");
+        newDivrow.classList.add("Row")
+
+        {for (let h = 0; h < 10; h++)
+            CREA DIV con clase casillas 
+            var newDivboxes = document.createElement("div");
+            newDivboxes.classList.add("boxes")
+            //aquí appendchild
+
+            {for (let j = 0; j < 10; j++)
+                CREA clase con claseletra[0]+ clasenumero++1
+                var claseletra = ['A','B','C','D'];
+                var clasenumero = 0
+                 var claseposicion = claseletra[0] + clasenumero
+                
+                
+                var newDivboxes.classList.add(claseletra)
+                Si j == 9 elimina valor 0 array */ 

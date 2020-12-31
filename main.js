@@ -7,7 +7,6 @@ window.onload = function Addonclick() {
     //Al cargar window añade un evento al hacer click en el botón con id #shoot que dispara un prompt y ejecuta TranslatePosition
     var shoot = document.querySelector('#shoot');
     shoot.addEventListener('click', ()=> (promptMe()));
-    
     function promptMe() {
         var targetB = prompt("Insert your shoot", "B1");
         targetB = targetB.toUpperCase();
@@ -15,7 +14,7 @@ window.onload = function Addonclick() {
     }
     //Al cargar window añade un evento al hacer click en el botón con id #show que muestra las casillas con 1
     var show = document.querySelector('#show');
-    show.addEventListener('click', ShowFunction, false);
+    show.addEventListener('click', ()=> (ShowFunction()));
 
 } //cierre windows.onload
 // Valores barcos  0 = empty // 1 = part of a ship // 2 = a sunken part of a ship // 3 = a missed shot
@@ -32,7 +31,7 @@ let gameBoard = [
     [0,0,0,0,0,0,0,0,0],
     [1,1,1,1,0,0,0,0,0]
 ];
-
+let gameBoardPosiciones = [];
 // Función que genera el evento TARGET de las clases "casilla" y llama la siguiente función.
 function myFunctionEvent (event) {
     var target = event.target.className;
@@ -66,7 +65,9 @@ function TranslatePosition (targetB){
                         } else if (targetLetter == "H") {
                         targetLposition = 7;
                         } else {targetLposition = 8;}
+    
     //Obtener valor de las coordenadas
+    // function ApplyPosition (){
         //console.table(gameBoard);//Tabla del array gameBoard. Dejar comentado si no es necesario hacer comprovaciones
         valorgameboard = gameBoard[targetLposition][targetPosition];
        // console.log(valorgameboard);
@@ -87,47 +88,9 @@ function TranslatePosition (targetB){
      //llamada en window onload muestra durante 5 segundos las casillas con valor 1 en matriz de un color distinto
     function ShowFunction(){
         //recorre el array y devuelve la posición de todos los valores 1. 
-        /* var indices = [];
-         var ele = 1;
-         var idx = gameBoard.indexOf(ele);
-         while (idx != -1) {
-             indices.push(idx);
-            idx = gameBoard.indexOf(ele, idx + 1);
-        }
-      
-        console.log(idx);*/
         //conversión posiciones a valores tablero
         //añadir clase Ship a todos.
         //activa sólo esta clase cuando se aprete el botón de mostrar barco
-     console.log("pendiente")
-    }
-  
-
- //Ampliar con: 
-    //Dentro de myFunction
-        // Entrar "target" por promt
-    // Button--> Mostrar barcos
-    // Button--> Resetear matriz aleatoriamente
-//Dudas
-    //Generar toda la tabla, con las clases des de js.
-/*    for (let i=0; i < gameboard.length ;i++)
-        CREA DIV con clase ROW
-        var newDivrow = document.createElement("div");
-        newDivrow.classList.add("Row")
-
-        {for (let h = 0; h < 10; h++)
-            CREA DIV con clase casillas 
-            var newDivboxes = document.createElement("div");
-            newDivboxes.classList.add("boxes")
-            //aquí appendchild
-
-            {for (let j = 0; j < 10; j++)
-                CREA clase con claseletra[0]+ clasenumero++1
-                var claseletra = ['A','B','C','D'];
-                var clasenumero = 0
-                 var claseposicion = claseletra[0] + clasenumero
-                
-                
-                var newDivboxes.classList.add(claseletra)
-                Si j == 9 elimina valor 0 array 
-*/
+        console.log("pendiente")
+    
+}//cierra Showfunction
