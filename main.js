@@ -1,7 +1,7 @@
 //Al cargar window añade un evento al hacer click en las casillas con clase "casillas" y ejecuta la función myFunctionEvent
 window.onload = function Addonclick() {
     var idboxes = document.getElementsByClassName("boxes");
-    for (var i = 0; i < idboxes.length; i++) {
+        for (var i = 0; i < idboxes.length; i++) {
         idboxes[i].addEventListener("click", myFunctionEvent, false);
     }
     //Al cargar window añade un evento al hacer click en el botón con id #shoot que dispara un prompt y ejecuta TranslatePosition
@@ -29,9 +29,8 @@ let gameBoard = [
     [1,0,0,0,0,0,0,0,0],
     [1,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0],
-    [1,1,1,1,0,0,0,0,0]
-];
-let gameBoardPosiciones = [];
+ ];
+
 // Función que genera el evento TARGET de las clases "casilla" y llama la siguiente función.
 function myFunctionEvent (event) {
     var target = event.target.className;
@@ -67,7 +66,6 @@ function TranslatePosition (targetB){
                         } else {targetLposition = 8;}
     
     //Obtener valor de las coordenadas
-    // function ApplyPosition (){
         //console.table(gameBoard);//Tabla del array gameBoard. Dejar comentado si no es necesario hacer comprovaciones
         valorgameboard = gameBoard[targetLposition][targetPosition];
        // console.log(valorgameboard);
@@ -86,11 +84,32 @@ function TranslatePosition (targetB){
      } //cierra TranslatePosition
 
      //llamada en window onload muestra durante 5 segundos las casillas con valor 1 en matriz de un color distinto
-    function ShowFunction(){
-        //recorre el array y devuelve la posición de todos los valores 1. 
+   
+    
+    
+        function ShowFunction(){
+            var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
+            for( var i = 0; i<gameBoard.length; i++ ){
+                var row = gameBoard[i];
+                for( var j = 0; j<row.length; j++ ){
+                    //is this a ship?
+                    var value = gameBoard[i][j];
+                    if( value == 1 ){
+                        //this is a ship
+                        var position = letters[i]+(j+1);
+                        TranslatePosition(position);
+                    }
+                }   
+            }
+        }//cierra Showfunction
+     //recorre el array y devuelve la posición de todos los valores 1. 
+       //Que quede un array similar a :
+       //[A1 : 1]; [A2:1] ... [H1:1] ... [H10:0]
         //conversión posiciones a valores tablero
         //añadir clase Ship a todos.
-        //activa sólo esta clase cuando se aprete el botón de mostrar barco
-        console.log("pendiente")
-    
-}//cierra Showfunction
+               //activa sólo esta clase cuando se aprete el botón de mostrar barco
+        //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+        //Step 4 — Reformatting Array Objects https://www.digitalocean.com/community/tutorials/4-uses-of-javascripts-arraymap-you-should-know
+            
+
+
